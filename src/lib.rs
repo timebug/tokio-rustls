@@ -356,6 +356,10 @@ where
             state: TlsState::Stream,
         }))
     }
+
+    pub fn into_inner(self) -> IO {
+        self.io
+    }
 }
 
 /// Future returned from `TlsConnector::connect` which will resolve
